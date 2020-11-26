@@ -15,7 +15,7 @@
         { 
             totalWorkingDays++;
             let empCheck = Math.floor(Math.random() * 10) % 3; 
-            let empHrs = getWorkingHrs(empCheck); 
+            let empHrs = getWorkingHours(empCheck); 
             totalEmpHrs += empHrs; 
             empDailyWageAndHrArray.push(
             {
