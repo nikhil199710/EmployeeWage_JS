@@ -2,6 +2,7 @@
 //UC 6-Store it in array,the the daily employee wage
 {
 	const MAX_HRS_IN_MONTH=100;
+	const NUM_OF_WORKING_DAYS=20;
 	let totalEmpHrs=0;
 	let totalWorkingDays=0;
 	let empDailyWageArr=new Array();
@@ -14,12 +15,12 @@
 	while(totalEmpHrs<=MAX_HRS_IN_MONTH && totalWorkingDays<NUM_OF_WORKING_DAYS)
 	{
 		totalWorkingDays++;
-		empCheck=Math.floor(Math.random()*10)%3;
-		empHrs=getWorkingHrs(empCheck);
+		let empCheck=Math.floor(Math.random()*10)%3;
+		let empHrs=getWorkingHrs(empCheck);
 		totalEmpHrs+=empHrs;
 		empDailyWageArr.push(calculateDailyWage(empHrs));
 	}
-    empWage=calculateDailyWage(totalEmpHrs);
+    let empWage=calculateDailyWage(totalEmpHrs);
     console.log("Started with UC 6");
 	for(let s of empDailyWageArr)
 	{
